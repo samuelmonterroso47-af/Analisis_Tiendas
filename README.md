@@ -1,4 +1,4 @@
-# 📊 Análisis Estratégico de Rendimiento Comercial: AluraStoreLatam
+# 📊 Análisis Estratégico de Rendimiento Comercial:
 
 Este proyecto consiste en un diagnóstico integral de cuatro unidades de negocio (**Tienda 1, 2, 3 y 4**) mediante el análisis de KPIs críticos. El objetivo principal es proporcionar una recomendación técnica fundamentada para la toma de decisiones sobre la optimización del portafolio y la posible desinversión de activos.
 
