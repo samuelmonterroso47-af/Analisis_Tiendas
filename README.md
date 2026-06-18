@@ -1,50 +1,62 @@
-# 📊 Análisis Estratégico de Rendimiento Comercial:
+# 🏍️ Sistema Profesional de Gestión de Sala de Ventas (2wh & 3wh)
 
-Este proyecto consiste en un diagnóstico integral de cuatro unidades de negocio (**Tienda 1, 2, 3 y 4**) mediante el análisis de KPIs críticos. El objetivo principal es proporcionar una recomendación técnica fundamentada para la toma de decisiones sobre la optimización del portafolio y la posible desinversión de activos.
+Este proyecto ha sido evolucionado de un análisis estático en Jupyter Notebook a una aplicación empresarial funcional diseñada específicamente para la venta de repuestos de motocicletas (2wh) y motocarros (3wh).
 
-## 🎯 Objetivo del Informe
-El propósito de este análisis es evaluar el desempeño de cada tienda en función de sus ingresos, eficiencia logística y satisfacción del cliente para identificar la unidad con menor alineamiento estratégico.
+## 🚀 Nuevas Capacidades Empresariales
 
-## 🚀 Metodología y KPIs Monitoreados
-Para este análisis se utilizaron técnicas de limpieza y extracción de datos comerciales, centrándose en los siguientes indicadores:
-
-* **Ingresos Totales (Top-Line):** Medición de la facturación bruta por ubicación.
-* **Mix de Productos (Assortment):** Identificación de categorías líderes y de baja rotación.
-* **Customer Experience (CX):** Análisis de calificaciones promedio para medir la lealtad de marca.
-* **Eficiencia Logística:** Impacto de los costos de envío promedio en la rentabilidad operativa.
-
----
-
-## 📈 Hallazgos Clave
-
-### 1. Desempeño de Facturación
-Se observa una dispersión significativa en los ingresos. La **Tienda 4** lidera la generación de flujo de caja, mientras que la **Tienda 1** presenta el volumen de ventas más bajo, señalando una posible subutilización de su capacidad comercial.
-
-### 2. Análisis de Inventario y Demanda
-El desglose granular de SKUs permite identificar "productos estrella" y artículos de baja rotación. Se detectó que la **Tienda 1** enfrenta dificultades para posicionar categorías clave, lo que genera capital inmovilizado.
-
-### 3. Logística y Rentabilidad
-El costo de envío actúa como un determinante de competitividad. Un costo elevado en unidades de baja facturación erosiona el margen de contribución, factor crítico identificado en la unidad de menor rendimiento.
+1.  **Arquitectura Modular**: Código organizado en módulos (`src/`) siguiendo estándares de ingeniería de software.
+2.  **Base de Datos Relacional**: Implementación de SQLAlchemy con SQLite para gestionar:
+    *   **Inventario**: Repuestos categorizados por tipo de vehículo (2wh/3wh).
+    *   **CRM**: Seguimiento y registro de clientes.
+    *   **Ventas**: Historial detallado con KPIs dinámicos.
+3.  **Dashboard Interactivo**: Aplicación web construida con Streamlit para uso en tiempo real en la sala de ventas.
+4.  **Analítica Avanzada**: Visualización automática de Ingresos, Mix de productos (Assortment) y Customer Experience (CX).
 
 ---
 
-## 💡 Recomendación Estratégica
-Tras evaluar todas las variables, la recomendación técnica para el **Sr. Juan** es considerar la **desinversión estratégica de la Tienda 1**. 
+## 🛠️ Estructura del Proyecto
 
-**Justificación:**
-* Menor volumen de ingresos del grupo.
-* Estructura de costos logísticos que compromete la rentabilidad.
-* Bajo rendimiento en el mix de productos en comparación con la Tienda 4.
+```text
+.
+├── data/               # Base de datos SQLite
+├── src/                # Código fuente
+│   ├── app.py          # Dashboard Streamlit (Frontend)
+│   ├── models.py       # Definición de tablas DB
+│   ├── database.py     # Configuración de conexión
+│   ├── crm.py          # Lógica de clientes
+│   ├── inventory.py    # Lógica de repuestos
+│   └── analytics.py    # Cálculo de KPIs
+├── tests/              # Pruebas automatizadas
+└── README.md
+```
 
 ---
 
-## 🛠️ Herramientas Utilizadas
-* **Python:** Procesamiento y análisis de datos.
-* **Pandas:** Limpieza y extracción de métricas comerciales.
-* **Matplotlib / Seaborn:** Visualización de datos para reportes ejecutivos.
-* **Google Colab:** Entorno de desarrollo.
+## 💻 Instrucciones de Uso
 
-## ✒️ Autor
-**[MSC. ESVIN SAMUEL CULAN MONTERROSO]**
-*Especialista en Finanzas, Operaciones y Estrategia Comercial.*
-Experto en limpieza de datos, extracción de métricas clave y planificación de metas comerciales.
+### 1. Requisitos
+* Python 3.10+
+* Dependencias: `pip install sqlalchemy streamlit pandas plotly pytest`
+
+### 2. Inicialización
+El sistema ya cuenta con una base de datos poblada para demostración. Si desea reiniciar los datos, ejecute:
+```bash
+export PYTHONPATH=$PYTHONPATH:.
+python3 src/seed_data.py
+```
+
+### 3. Ejecutar la Aplicación
+Para iniciar el dashboard de sala de ventas:
+```bash
+streamlit run src/app.py
+```
+
+---
+
+## 📈 KPIs Monitoreados (En Tiempo Real)
+*   **Top-Line**: Ingresos brutos por sucursal y tipo de vehículo.
+*   **Assortment**: Análisis de rotación por categoría de repuesto (Motor, Frenos, etc.).
+*   **CX (Customer Experience)**: Calificación promedio de satisfacción del cliente.
+
+**Autor**: [Jules - AI Software Engineer]
+*Proyecto evolucionado para nivel empresarial.*
